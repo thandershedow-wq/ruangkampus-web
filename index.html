@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RuangKampus — Peminjaman Fasilitas Kampus</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">RuangKampus</a>
+    <button id="tombol-menu" type="button" aria-expanded="false" aria-controls="menu-utama" aria-label="Buka menu navigasi">Menu</button>
+    <nav id="menu-utama" aria-label="Menu utama" hidden>
+      <ul>
+        <li><a href="#katalog">Katalog</a></li>
+        <li><a href="#status">Status Pengajuan</a></li>
+        <li><a href="#bantuan">Bantuan</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="katalog">
+    <section class="hero">
+      <h1>Cek & Pinjam Ruangan Kampus Lebih Cepat</h1>
+      <p>Hindari bentrok jadwal acara organisasi dengan sistem peminjaman real-time.</p>
+    </section>
+
+    <section class="filter-section" aria-label="Filter Ruangan">
+      <label for="filter-kapasitas">Minimal Kapasitas:</label>
+      <select id="filter-kapasitas">
+        <option value="all">Semua Kapasitas</option>
+        <option value="30">≥ 30 Orang</option>
+        <option value="50">≥ 50 Orang</option>
+      </select>
+    </section>
+
+    <section class="daftar-ruangan" aria-label="Daftar Ruangan">
+      <article class="kartu-ruangan" data-kapasitas="50">
+        <h2>Ruang Seminar B</h2>
+        <p>Kapasitas: 50 orang · AC, Proyektor</p>
+        <p class="status-tersedia">Status: Tersedia (Hijau)</p>
+        <button type="button" class="btn-pinjam" data-nama="Ruang Seminar B" aria-label="Pinjam Ruang Seminar B">Pinjam Ruangan</button>
+      </article>
+
+      <article class="kartu-ruangan" data-kapasitas="30">
+        <h2>Laboratorium Komputer 1</h2>
+        <p>Kapasitas: 30 orang · PC Workstation</p>
+        <p class="status-terisi">Status: Terisi (Merah)</p>
+        <button type="button" class="btn-pinjam" data-nama="Laboratorium Komputer 1" aria-label="Pinjam Laboratorium Komputer 1" disabled>Terisi</button>
+      </article>
+    </section>
+  </main>
+
+  <section id="status">
+    <h2>Lacak Status Pengajuan</h2>
+    <p id="info-status" role="status">Belum ada pengajuan aktif.</p>
+  </section>
+
+  <footer>
+    <p>© 2026 RuangKampus · Sistem Informasi Peminjaman Fasilitas Kampus</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
