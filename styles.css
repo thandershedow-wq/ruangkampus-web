@@ -1,0 +1,100 @@
+:root {
+  --warna-utama: #0f766e;
+  --warna-aksen: #0d9488;
+  --warna-teks: #1f2937;
+  --warna-bg: #f8fafc;
+  --warna-kartu: #ffffff;
+  --ruang-sm: 8px;
+  --ruang-md: 16px;
+  --ruang-lg: 24px;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--warna-bg);
+  color: var(--warna-teks);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--ruang-md) var(--ruang-lg);
+  background-color: var(--warna-kartu);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--warna-utama);
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: var(--ruang-md);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--warna-teks);
+}
+
+main {
+  padding: var(--ruang-lg);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: var(--ruang-lg);
+}
+
+.daftar-ruangan {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--ruang-md);
+}
+
+.kartu-ruangan {
+  background-color: var(--warna-kartu);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: var(--ruang-md);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+button {
+  font: inherit;
+  padding: var(--ruang-sm) var(--ruang-md);
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background-color: var(--warna-utama);
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--warna-aksen);
+}
+
+:focus-visible {
+  outline: 3px solid var(--warna-utama);
+  outline-offset: 2px;
+}
+
+footer {
+  text-align: center;
+  padding: var(--ruang-lg);
+  font-size: 0.875rem;
+  color: #64748b;
+  border-top: 1px solid #e2e8f0;
+  margin-top: var(--ruang-lg);
+}
